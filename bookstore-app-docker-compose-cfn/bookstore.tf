@@ -13,7 +13,7 @@ terraform {
 
 
 provider "github" {
-  token = "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"
+  token = "xxxxxxxxxxxx"
 }
 
 provider "aws" {
