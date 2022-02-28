@@ -7,8 +7,8 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 20Gi
+    storage: 20Gi             # Skeleton of projects given
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/mnt/data"
+    path: "/mnt/data"         # Skeleton of projects given

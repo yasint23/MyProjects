@@ -11,16 +11,16 @@ spec:
       name: mysql-pod
   template:
     metadata:
-      name: mysql-pod
+      name: mysql-pod 
       labels:
-        name: mysql-pod
+        name: mysql-pod                # This will be same in 'mysql_service.yaml' when we create.
     spec:
       containers:
-      - image: mysql:5.7
-        name: mysql
-        imagePullPolicy: Always #https://kubernetes.io/docs/concepts/configuration/overview/
-        env:
-        - name: MYSQL_PASSWORD
+      - image: mysql:5.7                 #From readme file
+        name: mysql                      # We need to define env-var because in app.py file developer refer to write username, password with env var.
+        imagePullPolicy: Always
+        env:                             #Environment variables from docker hub given what is mandatory for mysql/ 
+        - name: MYSQL_PASSWORD           #create secrets_configMap files then write env section
           valueFrom:
             secretKeyRef:
               name: mysql-secret
@@ -30,11 +30,11 @@ spec:
             secretKeyRef:
               name: mysql-secret
               key: mysql-root-password
-        envFrom:
+        envFrom:                             # Take the database information from 'servers_configmap'
           - configMapRef:
-              name: database-configmap
+              name: servers_configmap       
         ports:
-        - containerPort: 3306
+        - containerPort: 3306                #From readme file
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: result-app
-          image: serkangumus06/phonebook-result
+          image: yasint23/result_server
           ports:
           - containerPort: 80
           env:

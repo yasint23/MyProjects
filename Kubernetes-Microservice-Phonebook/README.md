@@ -40,7 +40,7 @@ Phonebook Microservice Web Application aims to create a web application with MyS
 
     - Use a custom network for the services.
 
-- In the Kubernetes environment, I will configure three deployements with their services and a persistent volume for MySQL deployments. I can find the definitions below for the objects I should create:
+- In the Kubernetes environment, I will configure three deployments with their services and a persistent volume for MySQL deployments. I can find the definitions below for the objects I should create:
 
   1.1. CREATE/DELETE/UPDATE DEPLOYMENT
 

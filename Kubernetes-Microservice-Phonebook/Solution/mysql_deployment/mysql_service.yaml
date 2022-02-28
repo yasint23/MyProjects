@@ -9,4 +9,4 @@ spec:
   - port: 3306
     targetPort: 3306
   selector:
-    name: mysql-pod
+    name: mysql-pod      # This is the same in 'mysql_deployment.yaml'
