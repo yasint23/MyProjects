@@ -13,7 +13,7 @@ terraform {
 
 
 provider "github" {
-  token = "xxxxxxxxxxxx"
+  token = "xxxxxxxxxxxxxx"
 }
 
 provider "aws" {
@@ -64,7 +64,7 @@ resource "aws_instance" "tf-docker-ec2" {
           -o /usr/local/bin/docker-compose
           chmod +x /usr/local/bin/docker-compose
           mkdir -p /home/ec2-user/bookstore-api
-          TOKEN="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"
+          TOKEN="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"
           FOLDER="https://$TOKEN@raw.githubusercontent.com/yasint23/bookstore-repo/main/"
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/app.py" -L "$FOLDER"bookstore-api.py
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/requirements.txt" -L "$FOLDER"requirements.txt
@@ -107,7 +107,10 @@ resource "aws_security_group" "tf-docker-sec-gr" {
 
 }
 
+output "website" {
+  value = "http://${aws_instance.tf-docker-ec2.public_dns}"
 
+}
 
 
 
