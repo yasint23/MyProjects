@@ -14,6 +14,8 @@ This project aims to create full CI/CD Pipeline for microservice based applicati
 
 ![Pipelines to be configured](./project-503-pipelines.png)
 
+![Project Structure](./project_structure.png)
+
 ## Flow of Tasks for Project Realization
 
 | Epic | Task  | Task #  | Task Definition   | Branch  |
