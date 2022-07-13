@@ -4,7 +4,7 @@ Description: |
   template showing how to create an architecture included VPC with multiple subnets. There are two public, two
   private subnets and one AZ has NAT Instance (it can be used as bastion host) and public subnets routed internet 
   gateway. Both Subnets has contains an EC2 instance behind the load balancer and also basic web server application 
-  writte with Django. Autoscaling group is defined for tagte tarkking policy which is set up %70 CPU utilization. 
+  written with Django. Autoscaling group is defined for tagte tarkking policy which is set up %70 CPU utilization. 
   Cloudfront is served as cache. This app, send data to the RDS which is located private subnet and  also just specific
   EC2 can reach RDS instance. **WARNING** This template creates an Amazon EC2 instance. You will be billed for the 
   AWS resources used if you create a stack from this template. !!!Please do not forget to change userdata based on your github 

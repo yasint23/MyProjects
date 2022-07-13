@@ -4,6 +4,8 @@
 
 My Blog Page Application aims to deploy blog application as a web application written Django Framework on AWS Cloud Infrastructure. This infrastructure has Application Load Balancer with Auto Scaling Group of Elastic Compute Cloud (EC2) Instances and Relational Database Service (RDS) on defined VPC. Also, The Cloudfront and Route 53 services are located in front of the architecture and manage the traffic in secure. User is able to upload pictures and videos on own blog page and these are kept on S3 Bucket. I will create this architecture.
 
+![Project_004](capstone.jpg)
+
 ## Steps to Solution
   
 ### Step 1: Create dedicated VPC and whole components
@@ -190,7 +192,7 @@ python3 manage.py migrate
 python3 manage.py runserver 0.0.0.0:80
 ```
 
-## Step 8: Write RDS database endpoint and S3 Bucket name in settings file given by Clarusway Fullstack Developer team and push your application into your own public repo on Github
+## Step 8: Write RDS database endpoint and S3 Bucket name in settings file given by Fullstack Developer team and push your application into your own public repo on Github
 Please follow and apply the instructions in the developer_notes.txt.
 ```text
 - Movie and picture files are kept on S3 bucket named aws_capstone_S3_<name>_Blog as object. You should create an S3 bucket and write name of it on "/src/cblog/settings.py" file as AWS_STORAGE_BUCKET_NAME variable. In addition, you must assign region of S3 as AWS_S3_REGION_NAME variable
