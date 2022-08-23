@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t hasant23/hello-world:latest .'
+				sh 'docker build -t yasint23/hello-python:latest .'
 			}
 		}
 	}
@@ -39,7 +39,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push hasant23/hello-world:latest'
+				sh 'docker push yasint23/hello-python:latest'
 			}
 		}
 

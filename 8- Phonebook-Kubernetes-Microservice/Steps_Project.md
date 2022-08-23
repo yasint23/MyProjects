@@ -1,4 +1,4 @@
-## Steps for Project:
+# Steps for Project:
 
 - Run kubernetes-env-cf.yaml file on AWS console cloudformation page.
 
@@ -8,6 +8,10 @@
 * Deployment for Mysql and Persistent volume will be connected to it
 
 1- Connect to the Master Node. (Update and install git)
+```
+$ sudo apt-get update
+$ sudo install git
+```
 
 2- Pull project support files from github repo.
 
@@ -22,15 +26,17 @@ $ docker push yasint23/web_server
 $ docker build -t yasint23/result_server . 
 $ docker push yasint23/result_server
 
-5- Create folder 'Solution' / 'mysql_deployment' / 'result_server' / 'web_server' / secrets_configMap
+5- Create folder 'k8s' / 'mysql_deployment' / 'result_server' / 'web_server' / secrets_configMap
 
-6- Go to 'Solution' / 'mysql_deployment'
+6- Go to 'k8s' / 'mysql_deployment'
 - Create persistent_volume.yml 
 - Create persistent_volume_claim.yml 
 $ kubectl apply -f .
 $ kubectl get pv,pvc
 
 7- Create mysql_deployment.yaml     (Content from kubernetes.io search "deployment" or install extension of kubernetes to vscode type deployment)
+This can be done by command;
+$ kubectl create deployment --image=mysql:5.7 mysql-deploy --dry-run=client -o yaml > mysql_deployment.yaml
 
 - Create 'mysql_secret.yaml' and 'secrets_configmap.yaml' files under 'secrets_configMap' folder to complete "env" section of 'mysql_deployment.
 - Create mysql_service.yaml 

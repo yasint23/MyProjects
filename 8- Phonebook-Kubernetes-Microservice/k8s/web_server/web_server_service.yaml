@@ -12,4 +12,4 @@ spec:
       targetPort: 80
       nodePort: 30001
   selector:
-    name: phonebook-app-pod      # Same deployment.yaml file
+    name: phonebook-app-pod      # Same with the deployment.yaml file
