@@ -22,7 +22,7 @@ variable "tags" {
 resource "aws_instance" "control_node" {
   ami = "ami-0b0af3577fe5e3532"
   instance_type = "t2.medium"
-  key_name = "oliver"
+  key_name = "yasin"
   iam_instance_profile = aws_iam_instance_profile.ec2full.name
   vpc_security_group_ids = [aws_security_group.tf-sec-gr.id]
   tags = {
@@ -34,7 +34,7 @@ resource "aws_instance" "managed_nodes" {
   ami = "ami-0b0af3577fe5e3532"
   count = 3
   instance_type = "t2.micro"
-  key_name = "oliver"
+  key_name = "yasin"
   vpc_security_group_ids = [aws_security_group.tf-sec-gr.id]
   tags = {
     Name = "ansible_${element(var.tags, count.index )}"
@@ -112,7 +112,7 @@ resource "null_resource" "config" {
     host = aws_instance.control_node.public_ip
     type = "ssh"
     user = "ec2-user"
-    private_key = file("~/oliver.pem")
+    private_key = file("~/yasin.pem")
   }
 
   provisioner "file" {
@@ -126,8 +126,8 @@ resource "null_resource" "config" {
   }
 
   provisioner "file" {
-    source = "~/oliver.pem"
-    destination = "/home/ec2-user/oliver.pem"
+    source = "~/yasin.pem"
+    destination = "/home/ec2-user/yasin.pem"
   }
 
   provisioner "remote-exec" {
@@ -136,7 +136,7 @@ resource "null_resource" "config" {
       "sudo yum install -y python3",
       "pip3 install --user ansible",
       "pip3 install --user boto3",
-      "chmod 400 oliver.pem"
+      "chmod 400 yasin.pem"
     ]
   }
 

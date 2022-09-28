@@ -15,7 +15,7 @@ key: Name  Value: ansible_nodejs,       key:environment value:development,   key
 
 Connect the ansible_control node
    
-   - Copy the student files
+   - Copy the developer files
 
    - Run the commands below to install Python3 and Ansible. 
 
@@ -50,7 +50,7 @@ $ chmod 400 yasin.pem
 ```
 ## Part 3 - Creating dynamic inventory (Targets will get Ip address by this, IP address can be change when ec2 stop etc.)
 
-- go to AWS Management Consol and select the IAM roles:
+- go to AWS Management Console and select the IAM roles:
 
 - click the  "create role" then create a role with "AmazonEC2FullAccess"
 
@@ -58,7 +58,7 @@ $ chmod 400 yasin.pem
 
 - select actions -> security -> modify IAM role
 
-- select the role thay you have jsut created for EC2 full access and save it.
+- select the role that you have just created for EC2 full access and save it.
 
 - install "boto3"
 
@@ -123,14 +123,14 @@ cd ansible-Project
 mkdir postgres nodejs react
 ```
 
-- Copy `~/student_files/todo-app-pern` directory to ansible-Project directory.
+- Copy `~/developer_files/todo-app-pern` directory to ansible-Project directory.
 
 - Change directory to `postgres` directory.
 
 ```bash
 cd postgres
 ```
-- Copy `init.sql` file from `student_files/todo-app-pern/database` to `postgres` directory. (For the initialize database)
+- Copy `init.sql` file from `developer_files/todo-app-pern/database` to `postgres` directory. (For the initialize database)
 
 - Create a Dockerfile
 

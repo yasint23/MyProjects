@@ -84,66 +84,20 @@ In the architecture, you can configure your architecture with these conditions,
 ## Project Skeleton 
 
 ```text
-007:clarusway_ansible_proj (folder)
+Deploy_webpage_ansible_proj (folder)
 |
-|----Readme.md               # Given to the students (Definition of the project)
-|----todo-app-perm (folder)  # Given to the students (Nodejs and React files)
+|----Readme.md               # Given (Definition of the project)
+|----todo-app-perm (folder)  # Given (Nodejs and React files)
 |       1.server (folder) ---> Nodejs folders and files
 |       2.client (folder) ---> React folders and files
 |       3.database (folder)--> init.sql file 
-|----developer_notes.txt     # Given to the students (txt file)
-|----Ansible-Playbook        # This will be created by student
+|----developer_notes.txt     # Given (txt file)
+|----Ansible-Playbook        # This will be created by devops team
 ```
 
 ## Expected Outcome
 
 ![Todo Web Page](./todo_web.png)
-
-### At the end of the project, following topics are to be covered;
-
-- Ansible playbook preparation without roles
-
-- Ansible playbook preparation with roles.
-
-- Bash scripting
-
-- AWS Security groups create and attach to EC2.
-
-- Launch EC2 and it's configurations
-
-- Write dockerfile for postgresql, nodejs and react images.
-
-- Docker image creation for postgresql, nodejs and react containers with ansible playbook
-
-- Docker container launching using created image with ansible playbook
-
-- Git & Github for Version Control System
-
-### At the end of the project, students will be able to;
-
-- Write Ansible playbook in different ways which are without Roles and with Roles
-
-- Apply web programming skills, importing packages within Nodejs and React Frameworks
-
-- Write Dockerfiles for different environments
-
-- Create containers which use React, Nodejs and PostgreSQL docker images 
-
-- Configure connection to the `PostgreSQL` database.
-
-- Connect backend server to database
-
-- Configure Nodejs Framework
-
-- Connect frontend server to backend server
-
-- Configure React Framework for development environment
-
-- Configure React Framework for production environment
-
-- Demonstrate bash scripting skills using `Ansible playbook` to setup web-page on EC2 Instance.
-
-- Apply git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
 ## Resources
 
